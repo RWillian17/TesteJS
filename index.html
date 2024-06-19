@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        document.getElementById("botaoTroca").addEventListener("click",salva);
+
+        var nomePes;
+        var sobrenomePes;
+        function salva(){
+
+            nomePes = document.getElementById("nome").value;
+            sobrenomePes = document.getElementById("sobrenome").value;
+
+            console.log(nomePes);
+            console.log(sobrenomePes);
+        }
+        
+        function compara(){
+            console.log("nada");
+            if ( nomePes == "lala"){
+                document.getElementById("funcionou").innerHTML = "Sucesso";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Texto qualquer</h2>
+    <label>Primeiro Nome</label>
+    <input id="nome" type= "text" >
+    <label>Sobrenome</label>
+    <input id="sobrenome" type= "text" >
+    <button onclick="salva()" type="botao">Clique Aqui !</button>
+    <button id = "botaoTroca" type="botaoFundo">Mude a cor !</button>
+    <p id="funcionou"></p>
+</body>
+</html>
