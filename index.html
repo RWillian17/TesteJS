@@ -3,38 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" rel="shortcut icon" href="#">
     <title>Document</title>
-    <script>
-        
-        document.getElementById("botaoTroca").addEventListener("click",salva);
-
-        var nomePes;
-        var sobrenomePes;
-        function salva(){
-
-            nomePes = document.getElementById("nome").value;
-            sobrenomePes = document.getElementById("sobrenome").value;
-
-            console.log(nomePes);
-            console.log(sobrenomePes);
-        }
-        
-        function compara(){
-            console.log("nada");
-            if ( nomePes == "lala"){
-                document.getElementById("funcionou").innerHTML = "Sucesso";
-            }
-        }
-    </script>
 </head>
 <body>
-    <h2>Texto qualquer</h2>
-    <label>Primeiro Nome</label>
-    <input id="nome" type= "text" >
-    <label>Sobrenome</label>
-    <input id="sobrenome" type= "text" >
-    <button onclick="salva()" type="botao">Clique Aqui !</button>
-    <button id = "botaoTroca" type="botaoFundo">Mude a cor !</button>
-    <p id="funcionou"></p>
+    <div class="container">
+        <div class="container-usuario">
+            <h4>Título chique de Login</h4>
+            <div class = "PrimeiroNome">
+                <label for="nome">Primeiro Nome</label>
+                <input id="nome" type= "text" name="nome">
+            </div>
+            <div class = "Segundonome">
+                <label for="sobrenome">Sobrenome</label>
+                <input id="sobrenome" type= "text" name="sobrenome">
+            </div>
+            
+            <p id="nomeCompleto"></p>
+
+            <button id="juntaNome">Junta nomes</button>
+            
+        </div>
+
+        <div class="container-calculo">
+            <h4>Título chique de calculadora</h4>
+            <div>
+                <label for="priNum">Primeiro digito</label>
+                <input type = "text" class = "numero" id="priNum">
+            </div>
+            <div>
+                <label for="segNum">Segundo digito</label>
+                <input type = "number" class = "numero" id="segNum">
+            </div>
+
+            <p id="resultadoDivisao"></p>
+
+            <button id="divButton">Divide os termos</button>
+            
+        </div>
+
+        <div class="container-cores">
+            <h4>Mudar o fundo da página</h4>
+            <div>
+            <button id = "botaoClaro" type="botaoFundo"> Esquema claro !</button>
+            </div>
+            <div>
+            <button id = "botaoEscuro" type="botaoFundo"> Esquema escuro !</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
